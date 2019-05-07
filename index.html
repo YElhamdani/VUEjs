@@ -7,9 +7,20 @@
     <title>jeux</title>
 </head>
 <body>
+   
+   
     <div class="main-content" id="app">
-        {{ message }}
+       <a v-bind:href="link">{{ message }}</a>
+            <div class="ui succes message">
+                <p>bravo tu match avec Fatoumata</p>
+                <ul>
+                    <li v-for=" person in persons ">{{persons}}</li>
+                </ul>
+            </div>
     </div>
+    
+    
+    
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.js"></script>
     <script src="js/app.js"></script>
 </body>
