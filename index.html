@@ -9,20 +9,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   
-   
-    <div class="main-content" id="app">
-       <a v-bind:href="link">{{ message }}</a>
-            <div class="ui succes message">
-                <p>bravo tu match avec Fatoumata</p>
-                <ul>
-                    <li v-for=" person in persons ">{{ person }}</li>
-                </ul>
-            </div>
+    
+    <div class="ui inverted fixed menu">
+        <div class="header item">framework css semantic UI / test vueJS</div>
     </div>
 
-    <button class="ui button 1">read more</button>
-    
+    <div class="ui main container" id="app">
+        <a :href="link">{{ message }}</a>
+
+        <ul>
+            <li v-for=" person in persons">{{ person }}</li>
+        </ul>
+        
+        <div class="ui success message" v-if="success">
+            <p>bravo c'est gagné</p>
+        </div>
+
+        <div class="ui error message" v-else>
+                <p>vous avez été pitoyable</p>
+        </div>
+
+    </div>
+   
+   
+
     
     
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.js"></script>
