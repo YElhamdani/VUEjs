@@ -19,9 +19,11 @@
         <a :href="link">{{ message }}</a>
 
         <div class="ui success message" v-if="success">
+            
             <!-- pour etre plus rapide tu peux utiliser @ au lieu de v-on-->
             <i class="close icon" v-on:click="close"></i>
             <p>{{ message }}</p>
+            
         </div>
 
        
