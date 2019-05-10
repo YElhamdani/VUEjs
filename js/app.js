@@ -13,7 +13,15 @@ new Vue({
 
     methods: {
         close: function(){
+
             this.success = false;
+        },
+        style: function(){
+            if (this.success) {
+                return {background: '#00FF00'}
+            } else {
+                return {background: '#FF0000'}
+            }
         }
     }
 })
