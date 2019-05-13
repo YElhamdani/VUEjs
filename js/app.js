@@ -2,15 +2,14 @@ let vm = new Vue({
     el: '#app',
 
     data: {
-        success: false,
-        message : '',
+        firstname: 'Younes',
+        lastname: 'Elhamdani',
     },
 
     methods: {
         
-        cls: function(){
-            console.log('cls  called')
-            return this.success === true ? 'success' : 'error'
+        fullname: ()=>{
+            return this.firstname + ' ' + this.lastname
         
         }
     }
